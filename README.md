@@ -1,5 +1,5 @@
 # Telecontact-Scraper
-a command line tool to scrape (telecontact.ma)[https://www.telecontact.ma/] data
+a command line tool to scrape [telecontact.ma](https://www.telecontact.ma/) data
 
 ## How to use it:
 * __install requirements__
