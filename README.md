@@ -33,7 +33,11 @@ docker build -t telecontact-scraper .
 ```
 
 * __run image with arguments__
+<<<<<<< HEAD
 (Example)
+=======
+Example
+>>>>>>> a22702eb8c00fa0b12793303a6e01739faba75ff
 ```bash
 docker run -it --rm telecontact-scraper tech rabat
 ```
