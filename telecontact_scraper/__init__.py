@@ -1,6 +1,6 @@
 """
 Usage:
-    telecontact_scraper.py mine <string> <ou> [--file_path=<destination_file>]
+    telecontact-scraper mine <string> <ou> [--file_path=<destination_file>]
 
 Options:
     <string>    Qui,quoi? (raison sociale ou activité)
@@ -13,12 +13,13 @@ import logging
 logging.basicConfig(level=logging.INFO,format='%(levelname)s %(message)s')
 
 #import configs
-from configs import configs
+from telecontact_scraper.configs import configs
 #import helpers
-from helpers.helpers import get_results,save_results
+from telecontact_scraper.helpers.helpers import get_results,save_results
 
 
-def Main():
+def main():
+    '''Entry point'''
     args = docopt(__doc__,version="Telecontact Scraper 0.1")
     if args["mine"]:
         configs.QUERY_PARAMS["string"] = args["<string>"]
@@ -33,4 +34,4 @@ def Main():
 
 
 if __name__=="__main__":
-    Main()
+    main()
