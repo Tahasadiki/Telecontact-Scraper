@@ -7,11 +7,16 @@ a command line tool to scrape [telecontact.ma](https://www.telecontact.ma/) data
 pip install -r requirements.txt
 ```
 
+* __install package__
+```bash
+pip install -e .
+```
+
 * __command to run the scraping__
 ```python
 """
 Usage:
-    telecontact_scraper.py mine <string> <ou> [--file_path=<destination_file>]
+    telecontact-scraper mine <string> <ou> [--file_path=<destination_file>]
 
 Options:
     <string>    Qui,quoi? (raison sociale ou activité)
@@ -20,3 +25,15 @@ Options:
 """
 ```
 
+## Run as docker image
+
+* __build image__
+```bash
+docker build -t telecontact-scraper .
+```
+
+* __run image with arguments__
+Example
+```bash
+docker run -it --rm telecontact-scraper tech rabat
+```
