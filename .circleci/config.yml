@@ -42,4 +42,4 @@ jobs:
           command: |
             docker build -t tahasadiki/$IMAGE_NAME:$TAG .
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASS
-            docker push tahasadiki/$IMAGE_NAME:$TAG && docker push tahasadiki/$IMAGE_NAME:latest
+            docker push tahasadiki/$IMAGE_NAME:$TAG 

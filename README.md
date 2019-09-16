@@ -1,4 +1,4 @@
-# Telecontact-Scraper
+# Telecontact-Scraper [![CircleCI](https://circleci.com/gh/Tahasadiki/Telecontact-Scraper.svg?style=svg)](https://circleci.com/gh/Tahasadiki/Telecontact-Scraper)
 a command line tool to scrape [telecontact.ma](https://www.telecontact.ma/) data
 
 ## How to use it:
