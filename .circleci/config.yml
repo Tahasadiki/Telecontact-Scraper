@@ -40,6 +40,6 @@ jobs:
       - run:
           name: Build and push Docker image
           command: |
-            docker build -t tahasadiki/$IMAGE_NAME:$TAG .
+            docker build -t tahasadiki/$IMAGE_NAME:$TAG -t tahasadiki/$IMAGE_NAME:latest .
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASS
-            docker push tahasadiki/$IMAGE_NAME:$TAG 
+            docker push tahasadiki/$IMAGE_NAME:$TAG && docker push tahasadiki/$IMAGE_NAME:latest
