@@ -41,5 +41,5 @@ jobs:
           name: Build and push Docker image
           command: |
             docker build -t ariv3ra/$IMAGE_NAME:$TAG .
-            echo $DOCKERHUB_PASS | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASS
             docker push tahasadiki/$IMAGE_NAME:$TAG
