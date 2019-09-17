@@ -27,6 +27,7 @@ Options:
 
 ## Run as docker image
 
+### From Repository
 * __build image__
 ```bash
 docker build -t telecontact-scraper .
@@ -36,4 +37,8 @@ docker build -t telecontact-scraper .
 (Example)
 ```bash
 docker run -it --rm telecontact-scraper tech rabat
+```
+### From Docker Hub
+```bash
+docker pull tahasadiki/telecontact-scraper
 ```
