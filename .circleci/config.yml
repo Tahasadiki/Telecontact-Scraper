@@ -44,6 +44,9 @@ jobs:
             docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASS
             docker push tahasadiki/$IMAGE_NAME:$TAG && docker push tahasadiki/$IMAGE_NAME:latest
       - run:
-          name: Deploy app to AWS Server via Docker
+          name: Deploy image to Server via Docker
           command: |
-            ssh -o StrictHostKeyChecking=no ec2-user@ec2-15-188-56-218.eu-west-3.compute.amazonaws.com "docker pull tahasadiki/$IMAGE_NAME:latest"
+            if [[ $SERVER_HOST_ONLINE = 1 ]]
+            then
+              ssh -o StrictHostKeyChecking=no $SERVER_HOST "docker pull tahasadiki/$IMAGE_NAME:latest"
+            fi
